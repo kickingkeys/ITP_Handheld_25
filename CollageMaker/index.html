@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Landscape Composer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="image-sections">
+            <!-- Sky Section -->
+            <div class="image-section" id="sky-section">
+                <div class="image-container">
+                    <img src="images/sky1.jpg" alt="Sky 1">
+                    <img src="images/sky2.jpg" alt="Sky 2">
+                    <img src="images/sky3.jpg" alt="Sky 3">
+                    <div class="overlay">Overlay for Sky</div>
+                </div>
+                <div class="nav-arrows">
+                    <button class="nav-arrow left">←</button>
+                    <button class="nav-arrow right">→</button>
+                </div>
+            </div>
+
+            <!-- Mountains Section -->
+            <div class="image-section" id="mountains-section">
+                <div class="image-container">
+                    <img src="images/mountain1.jpg" alt="Mountains 1">
+                    <img src="images/mountain2.jpg" alt="Mountains 2">
+                    <img src="images/mountain3.jpg" alt="Mountains 3">
+                    <div class="overlay">Overlay for Mountains</div>
+                </div>
+                <div class="nav-arrows">
+                    <button class="nav-arrow left">←</button>
+                    <button class="nav-arrow right">→</button>
+                </div>
+            </div>
+
+            <!-- Foreground Section -->
+            <div class="image-section" id="foreground-section">
+                <div class="image-container">
+                    <img src="images/foreground1.jpg" alt="Foreground 1">
+                    <img src="images/foreground2.jpg" alt="Foreground 2">
+                    <img src="images/foreground3.jpg" alt="Foreground 3">
+                    <div class="overlay">Overlay for Foreground</div>
+                </div>
+                <div class="nav-arrows">
+                    <button class="nav-arrow left">←</button>
+                    <button class="nav-arrow right">→</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="bottom-nav">
+            <div class="button-layout">
+                <div class="shuffle-parent">
+                    <button class="shuffle">Shuffle</button>
+                </div>
+                <div class="save-wrapper">
+                    <button class="save-button">Save</button>
+                </div>
+            </div>
+            <div class="home-indicator">
+                <div class="home-indicator-bar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <style>
+        .image-container {
+            position: relative; /* Ensure the overlay is positioned relative to the container */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0; /* Adjust as needed */
+            left: 0; /* Adjust as needed */
+            right: 0; /* Adjust as needed */
+            bottom: 0; /* Adjust as needed */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white; /* Text color */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px; /* Adjust font size */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s ease; /* Smooth transition */
+        }
+
+        .image-section.selected .overlay {
+            opacity: 1; /* Show overlay when section is selected */
+        }
+    </style>
+</body>
+</html>
