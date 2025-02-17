@@ -1,9 +1,9 @@
 class TinselBrush {
     constructor(ctx) {
         this.ctx = ctx;
-        this.baseSize = 15;
-        this.minSize = 10;
-        this.maxSize = 35;
+        this.baseSize = 7.5;
+        this.minSize = 5;
+        this.maxSize = 17.5;
         this.colorOffset = 0;
         this.particles = [];
         this.lastUpdate = performance.now();

@@ -3,7 +3,6 @@ class DrawingApp {
         this.setupCanvases();
         this.setupTools();
         this.setupEventListeners();
-        this.checkOrientation();
         this.isDrawing = false;
         this.lastPoint = null;
         this.lastTimestamp = 0;
@@ -65,9 +64,7 @@ class DrawingApp {
         // Window events
         window.addEventListener('resize', () => {
             this.resize();
-            this.checkOrientation();
         });
-        window.addEventListener('orientationchange', () => this.checkOrientation());
 
         // Canvas events
         if (this.mainCanvas) {
@@ -124,12 +121,6 @@ class DrawingApp {
         if (initialTool) {
             initialTool.classList.add('active');
         }
-    }
-
-    checkOrientation() {
-        const warning = document.getElementById('orientationWarning');
-        const isLandscape = window.innerWidth > window.innerHeight;
-        warning.classList.toggle('hidden', isLandscape);
     }
 
     startDrawing(e) {

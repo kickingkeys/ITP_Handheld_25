@@ -1,9 +1,9 @@
 class WatercolorBrush {
     constructor(ctx) {
         this.ctx = ctx;
-        this.baseSize = 30;
-        this.minSize = 20;
-        this.maxSize = 60;
+        this.baseSize = 15;
+        this.minSize = 10;
+        this.maxSize = 30;
         this.color = '#3498db';
         this.noiseCanvas = utils.createNoise(256, 256);
         this.setupMask();

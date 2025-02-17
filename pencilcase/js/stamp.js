@@ -1,9 +1,9 @@
 class StampTool {
     constructor(mainCtx) {
         this.mainCtx = mainCtx;
-        this.baseSize = 40;
-        this.minSize = 30;
-        this.maxSize = 80;
+        this.baseSize = 20;
+        this.minSize = 15;
+        this.maxSize = 40;
         this.emojis = [
             '⭐️', '🌟', '✨', '💫', '⚡️', '❤️', '🧡', '💛', '💚', '💙',
             '💜', '🤍', '🌈', '☀️', '🌙', '⭐️', '🌟', '✨', '💫', '⚡️'
