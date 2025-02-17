@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid Pix Inspired Drawing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main drawing canvas -->
+    <canvas id="mainCanvas"></canvas>
+    
+    <!-- Effect canvas for particles and effects -->
+    <canvas id="effectCanvas"></canvas>
+    
+    <!-- Tool selection -->
+    <div class="toolbar">
+        <button type="button" class="tool-btn" data-tool="watercolor">Watercolor</button>
+        <button type="button" class="tool-btn" data-tool="stamp">Stamp</button>
+        <button type="button" class="tool-btn" data-tool="tinsel">Wacky Brush</button>
+        <button type="button" class="tool-btn explode-btn" id="explodeBtn">Explode! 💣</button>
+    </div>
+
+    <!-- Orientation warning -->
+    <div id="orientationWarning" class="orientation-warning hidden">
+        Please rotate to landscape
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/watercolor.js"></script>
+    <script src="js/stamp.js"></script>
+    <script src="js/tinsel.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
